@@ -108,20 +108,20 @@
 								<option id="gnu.c.compiler.option.debugging.level.1618489637" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.misc.other.1423989528" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c -std=gnu99 -mcpu=cortex-m4 -mthumb -ffunction-sections -fdata-sections -nostdlib -Wdouble-promotion -fsingle-precision-constant &quot;-Wa,-ahl=$*.s&quot;" valueType="string"/>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.2021192347" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="__SAM4E8E__"/>
+									<listOptionValue builtIn="false" value="__SAM4S8C__"/>
 								</option>
 								<option id="gnu.c.compiler.option.include.paths.472032721" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/portable/GCC/ARM_CM4F}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/portable/GCC/ARM_CM3}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CoreNG/asf}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CoreNG/asf/common/utils}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CoreNG/asf/sam/utils}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CoreNG/asf/sam/utils/preprocessor}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CoreNG/asf/sam/utils/header_files}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CoreNG/asf/sam/utils/cmsis/sam4e/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CoreNG/asf/sam/utils/cmsis/sam4s/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CoreNG/asf/thirdparty/CMSIS/Include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CoreNG/asf/sam/drivers}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CoreNG/variants/duetNG}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/CoreNG/variants/sam4s}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2085762981" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
@@ -140,18 +140,6 @@
 							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.1287077426" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.362308853" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
-						</toolChain>
-					</folderInfo>
-					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.400703681.650278306" name="/" resourcePath="src/portable/GCC/ARM_CM3">
-						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.release.1482177752" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.release" unusedChildren="">
-							<option id="cdt.managedbuild.option.gnu.cross.prefix.1357227958.684404074" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix.1357227958"/>
-							<option id="cdt.managedbuild.option.gnu.cross.path.762906289.1863147633" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path.762906289"/>
-							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.799716035" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler.2138972484"/>
-							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.343124484" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1964088152"/>
-							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.1347516820" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker.18476686"/>
-							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.2037781189" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker.1066940229"/>
-							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.1610037555" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver.2080806946"/>
-							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.1033133856" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler.1287077426"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
@@ -179,6 +167,7 @@
 		<configuration configurationName="SAM4E">
 			<resource resourceType="PROJECT" workspacePath="/FreeRTOS"/>
 		</configuration>
+		<configuration configurationName="SAM4S"/>
 		<configuration configurationName="Debug">
 			<resource resourceType="PROJECT" workspacePath="/FreeRTOS"/>
 		</configuration>
