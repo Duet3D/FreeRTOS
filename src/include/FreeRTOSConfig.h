@@ -71,6 +71,7 @@ extern uint32_t SystemCoreClock;
 #define configUSE_MALLOC_FAILED_HOOK			1
 #define configUSE_APPLICATION_TASK_TAG			0
 #define configUSE_COUNTING_SEMAPHORES			1
+#define configUSE_NEWLIB_REENTRANT 				0	// We'd like to use 1 but that makes the tasks too big because strint _reent is so large
 
 /* The full demo always has tasks to run so the tick will never be turned off.
 The blinky demo will use the default tickless idle implementation to turn the
@@ -104,7 +105,7 @@ FreeRTOS/Source/tasks.c for limitations. */
 to exclude the API function. */
 #define INCLUDE_vTaskPrioritySet		1
 #define INCLUDE_uxTaskPriorityGet		1
-#define INCLUDE_vTaskDelete				1
+#define INCLUDE_vTaskDelete				0
 #define INCLUDE_vTaskCleanUpResources	1
 #define INCLUDE_vTaskSuspend			1
 #define INCLUDE_vTaskDelayUntil			1
@@ -112,6 +113,7 @@ to exclude the API function. */
 #define INCLUDE_eTaskGetState			1
 #define INCLUDE_xTimerPendFunctionCall	1
 #define INCLUDE_uxTaskGetStackHighWaterMark	1
+#define INCLUDE_xQueueGetMutexHolder	1
 
 /* Cortex-M specific definitions. */
 #ifdef __NVIC_PRIO_BITS
