@@ -114,12 +114,14 @@ to exclude the API function. */
 
 /* Cortex-M specific definitions. */
 #ifdef __NVIC_PRIO_BITS
-	/* __BVIC_PRIO_BITS will be specified when CMSIS is being used. */
+	/* __NVIC_PRIO_BITS will be specified when CMSIS is being used. */
 	#define configPRIO_BITS       		__NVIC_PRIO_BITS
-#elif defined(__SAME51N19__)
+#elif defined(__SAME51N19__) || defined(__SAME70Q21__)
 	#define configPRIO_BITS       		3        /* 7 priority levels */
-#else
+#elif defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__)
 	#define configPRIO_BITS       		4        /* 15 priority levels */
+#else
+	#error Unknown value for configPRIO_BITS
 #endif
 
 /* The lowest interrupt priority that can be used in a call to a "set priority"
