@@ -30,9 +30,6 @@
 #ifndef FREERTOS_CONFIG_H
 #define FREERTOS_CONFIG_H
 
-/* Atmel library includes. */
-#include <asf.h>
-
 /*-----------------------------------------------------------
  * Application specific definitions.
  *
@@ -119,6 +116,8 @@ to exclude the API function. */
 #ifdef __NVIC_PRIO_BITS
 	/* __BVIC_PRIO_BITS will be specified when CMSIS is being used. */
 	#define configPRIO_BITS       		__NVIC_PRIO_BITS
+#elif defined(__SAME51N19__)
+	#define configPRIO_BITS       		3        /* 7 priority levels */
 #else
 	#define configPRIO_BITS       		4        /* 15 priority levels */
 #endif
