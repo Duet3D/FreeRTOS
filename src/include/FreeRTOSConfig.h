@@ -30,6 +30,13 @@
 #ifndef FREERTOS_CONFIG_H
 #define FREERTOS_CONFIG_H
 
+/* Atmel library includes. */
+#ifdef __SAME51N19A__
+#include "../../Duet3Expansion/src/atmel/SAME51_DFP/1.0.65/include/same51n19a.h"
+#else
+#include <asf.h>
+#endif
+
 /*-----------------------------------------------------------
  * Application specific definitions.
  *
@@ -68,7 +75,7 @@ extern uint32_t SystemCoreClock;
 #define configUSE_MALLOC_FAILED_HOOK			1
 #define configUSE_APPLICATION_TASK_TAG			0
 #define configUSE_COUNTING_SEMAPHORES			1
-#define configUSE_NEWLIB_REENTRANT 				0	// We'd like to use 1 but that makes the tasks too big because strint _reent is so large
+#define configUSE_NEWLIB_REENTRANT 				0	// We'd like to use 1 but that makes the tasks too big because struct _reent is so large
 
 /* The full demo always has tasks to run so the tick will never be turned off.
 The blinky demo will use the default tickless idle implementation to turn the
@@ -116,7 +123,7 @@ to exclude the API function. */
 #ifdef __NVIC_PRIO_BITS
 	/* __NVIC_PRIO_BITS will be specified when CMSIS is being used. */
 	#define configPRIO_BITS       		__NVIC_PRIO_BITS
-#elif defined(__SAME51N19__) || defined(__SAME70Q21__)
+#elif defined(__SAME51N19A__) || defined(__SAME70Q21__)
 	#define configPRIO_BITS       		3        /* 7 priority levels */
 #elif defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__)
 	#define configPRIO_BITS       		4        /* 15 priority levels */
@@ -132,7 +139,11 @@ function. */
 routine that makes calls to interrupt safe FreeRTOS API functions.  DO NOT CALL
 INTERRUPT SAFE FREERTOS API FUNCTIONS FROM ANY INTERRUPT THAT HAS A HIGHER
 PRIORITY THAN THIS! (higher priorities are lower numeric values. */
-#define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY	5
+#if configPRIO_BITS == 3
+# define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY	3	// 0-2 are for high priority interrupts that can't make system calls, 3-7 can make system calls
+#else
+# define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY	5	// 0-4 are for high priority interrupts that can't make system calls, 5-15 can make system calls
+#endif
 
 /* Interrupt priorities used by the kernel port layer itself.  These are generic
 to all Cortex-M ports, and do not rely on any particular library functions. */
