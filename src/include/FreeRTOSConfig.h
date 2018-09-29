@@ -30,11 +30,11 @@
 #ifndef FREERTOS_CONFIG_H
 #define FREERTOS_CONFIG_H
 
-/* Atmel library includes. */
+// This include is solely for the definition of __NVIC_PRIO_BITS
 #ifdef __SAME51N19A__
 #include "../../Duet3Expansion/src/atmel/SAME51_DFP/1.0.65/include/same51n19a.h"
 #else
-#include <asf.h>
+#include "../../CoreNG/asf/asf.h"
 #endif
 
 /*-----------------------------------------------------------
@@ -123,7 +123,7 @@ to exclude the API function. */
 #ifdef __NVIC_PRIO_BITS
 	/* __NVIC_PRIO_BITS will be specified when CMSIS is being used. */
 	#define configPRIO_BITS       		__NVIC_PRIO_BITS
-#elif defined(__SAME51N19A__) || defined(__SAME70Q21__)
+#elif defined(__SAME51N19A__) || defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__)
 	#define configPRIO_BITS       		3        /* 7 priority levels */
 #elif defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__)
 	#define configPRIO_BITS       		4        /* 15 priority levels */
