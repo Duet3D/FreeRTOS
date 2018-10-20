@@ -32,9 +32,9 @@
 
 // This include is solely for the definition of __NVIC_PRIO_BITS
 #ifdef __SAME51N19A__
-#include "../../Duet3Expansion/src/atmel/SAME51_DFP/1.0.65/include/same51n19a.h"
+#include "atmel/SAME51_DFP/1.0.65/include/same51n19a.h"
 #else
-#include "../../CoreNG/asf/asf.h"
+#include "asf.h"
 #endif
 
 /*-----------------------------------------------------------
