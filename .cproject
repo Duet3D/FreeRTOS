@@ -7,12 +7,6 @@
             			
             <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828" moduleId="org.eclipse.cdt.core.settings" name="SAM4E">
                 				
-                <macros>
-                    					
-                    <stringMacro name="GccPath" type="VALUE_TEXT" value="/home/christian/duet/gcc-arm-none-eabi-7-2018-q2-update/bin"/>
-                    				
-                </macros>
-                				
                 <externalSettings>
                     					
                     <externalSetting>
@@ -45,15 +39,15 @@
             			
             <storageModule moduleId="cdtBuildSystem" version="4.0.0">
                 				
-                <configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828" name="SAM4E" optionalBuildProperties="" parent="cdt.managedbuild.config.gnu.cross.exe.release">
+                <configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828" name="SAM4E" optionalBuildProperties="org.eclipse.cdt.docker.launcher.containerbuild.property.volumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.selectedvolumes=" parent="cdt.managedbuild.config.gnu.cross.exe.release">
                     					
                     <folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.487753828." name="/" resourcePath="">
                         						
                         <toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.release.626860186" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.release">
                             							
-                            <option id="cdt.managedbuild.option.gnu.cross.prefix.1795612870" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" value="arm-none-eabi-" valueType="string"/>
+                            <option id="cdt.managedbuild.option.gnu.cross.prefix.1795612870" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" useByScannerDiscovery="false" value="arm-none-eabi-" valueType="string"/>
                             							
-                            <option id="cdt.managedbuild.option.gnu.cross.path.991637560" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="${GccPath}" valueType="string"/>
+                            <option id="cdt.managedbuild.option.gnu.cross.path.991637560" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" useByScannerDiscovery="false" value="${ArmGccPath}" valueType="string"/>
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.578348621" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
                             							
@@ -155,12 +149,6 @@
             			
             <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.400703681" moduleId="org.eclipse.cdt.core.settings" name="SAM4S">
                 				
-                <macros>
-                    					
-                    <stringMacro name="GccPath" type="VALUE_TEXT" value="/home/christian/duet/gcc-arm-none-eabi-7-2018-q2-update/bin"/>
-                    				
-                </macros>
-                				
                 <externalSettings>
                     					
                     <externalSetting>
@@ -193,7 +181,7 @@
             			
             <storageModule moduleId="cdtBuildSystem" version="4.0.0">
                 				
-                <configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.400703681" name="SAM4S" optionalBuildProperties="" parent="cdt.managedbuild.config.gnu.cross.exe.release">
+                <configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.400703681" name="SAM4S" optionalBuildProperties="org.eclipse.cdt.docker.launcher.containerbuild.property.selectedvolumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.volumes=" parent="cdt.managedbuild.config.gnu.cross.exe.release">
                     					
                     <folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.400703681." name="/" resourcePath="">
                         						
@@ -201,7 +189,7 @@
                             							
                             <option id="cdt.managedbuild.option.gnu.cross.prefix.1357227958" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" value="arm-none-eabi-" valueType="string"/>
                             							
-                            <option id="cdt.managedbuild.option.gnu.cross.path.762906289" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="${GccPath}" valueType="string"/>
+                            <option id="cdt.managedbuild.option.gnu.cross.path.762906289" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="${ArmGccPath}" valueType="string"/>
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.1259489989" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
                             							
@@ -303,12 +291,6 @@
             			
             <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.694459458" moduleId="org.eclipse.cdt.core.settings" name="SAME70">
                 				
-                <macros>
-                    					
-                    <stringMacro name="GccPath" type="VALUE_TEXT" value="/home/christian/duet/gcc-arm-none-eabi-7-2018-q2-update/bin"/>
-                    				
-                </macros>
-                				
                 <externalSettings>
                     					
                     <externalSetting>
@@ -341,7 +323,7 @@
             			
             <storageModule moduleId="cdtBuildSystem" version="4.0.0">
                 				
-                <configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.694459458" name="SAME70" optionalBuildProperties="org.eclipse.cdt.docker.launcher.containerbuild.property.volumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.selectedvolumes=" parent="cdt.managedbuild.config.gnu.cross.exe.release">
+                <configuration artifactExtension="a" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.staticLib" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.staticLib,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.694459458" name="SAME70" optionalBuildProperties="org.eclipse.cdt.docker.launcher.containerbuild.property.selectedvolumes=,org.eclipse.cdt.docker.launcher.containerbuild.property.volumes=" parent="cdt.managedbuild.config.gnu.cross.exe.release">
                     					
                     <folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.694459458." name="/" resourcePath="">
                         						
@@ -349,7 +331,7 @@
                             							
                             <option id="cdt.managedbuild.option.gnu.cross.prefix.1273997589" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" useByScannerDiscovery="false" value="arm-none-eabi-" valueType="string"/>
                             							
-                            <option id="cdt.managedbuild.option.gnu.cross.path.1973954220" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" useByScannerDiscovery="false" value="${GccPath}" valueType="string"/>
+                            <option id="cdt.managedbuild.option.gnu.cross.path.1973954220" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" useByScannerDiscovery="false" value="${ArmGccPath}" valueType="string"/>
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.1016717410" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
                             							
@@ -453,12 +435,6 @@
             			
             <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.400703681.868606568" moduleId="org.eclipse.cdt.core.settings" name="SAM3X">
                 				
-                <macros>
-                    					
-                    <stringMacro name="GccPath" type="VALUE_TEXT" value="/home/christian/duet/gcc-arm-none-eabi-7-2018-q2-update/bin"/>
-                    				
-                </macros>
-                				
                 <externalSettings>
                     					
                     <externalSetting>
@@ -499,7 +475,7 @@
                             							
                             <option id="cdt.managedbuild.option.gnu.cross.prefix.236749429" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" value="arm-none-eabi-" valueType="string"/>
                             							
-                            <option id="cdt.managedbuild.option.gnu.cross.path.369454570" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="${GccPath}" valueType="string"/>
+                            <option id="cdt.managedbuild.option.gnu.cross.path.369454570" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="${ArmGccPath}" valueType="string"/>
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.1119322957" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
                             							
@@ -601,12 +577,6 @@
             			
             <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.1418259088" moduleId="org.eclipse.cdt.core.settings" name="SAME51">
                 				
-                <macros>
-                    					
-                    <stringMacro name="GccPath" type="VALUE_TEXT" value="/home/christian/duet/gcc-arm-none-eabi-7-2018-q2-update/bin"/>
-                    				
-                </macros>
-                				
                 <externalSettings>
                     					
                     <externalSetting>
@@ -647,7 +617,7 @@
                             							
                             <option id="cdt.managedbuild.option.gnu.cross.prefix.86259687" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" useByScannerDiscovery="false" value="arm-none-eabi-" valueType="string"/>
                             							
-                            <option id="cdt.managedbuild.option.gnu.cross.path.1728490836" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" useByScannerDiscovery="false" value="${GccPath}" valueType="string"/>
+                            <option id="cdt.managedbuild.option.gnu.cross.path.1728490836" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" useByScannerDiscovery="false" value="${ArmGccPath}" valueType="string"/>
                             							
                             <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.468372647" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
                             							
@@ -775,9 +745,13 @@
         		
         <configuration configurationName="SAM4E"/>
         		
-        <configuration configurationName="SAM4S"/>
+        <configuration configurationName="SAM3X"/>
         		
         <configuration configurationName="SAME70"/>
+        		
+        <configuration configurationName="SAME51"/>
+        		
+        <configuration configurationName="SAM4S"/>
         	
     </storageModule>
     	

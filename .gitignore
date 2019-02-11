@@ -48,3 +48,8 @@ Temporary Items
 /SAM4E/
 /SAME70/
 /SAM4S/
+/SAM3X/
+/SAME51/
+
+# Eclipse
+.settings/language.settings.xml
