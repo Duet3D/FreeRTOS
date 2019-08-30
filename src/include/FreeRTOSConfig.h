@@ -48,7 +48,13 @@ extern uint32_t SystemCoreClock;
 #define configSUPPORT_DYNAMIC_ALLOCATION 		0
 
 #define configUSE_PREEMPTION					1
-#define configUSE_PORT_OPTIMISED_TASK_SELECTION	1
+
+#if defined(__SAME51N19A__) || defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__) || defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__)
+# define configUSE_PORT_OPTIMISED_TASK_SELECTION	1
+#else
+# define configUSE_PORT_OPTIMISED_TASK_SELECTION	0
+#endif
+
 #define configUSE_QUEUE_SETS					1
 #define configUSE_IDLE_HOOK						0
 #define configUSE_TICK_HOOK						1
@@ -121,6 +127,8 @@ to exclude the API function. */
 	#define configPRIO_BITS       		3        /* 7 priority levels */
 #elif defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__)
 	#define configPRIO_BITS       		4        /* 15 priority levels */
+#elif defined(__SAMC21G18A__)
+#	define configPRIO_BITS       		2        /* 4 priority levels */
 #else
 	#error Unknown value for configPRIO_BITS
 #endif
@@ -133,7 +141,9 @@ function. */
 routine that makes calls to interrupt safe FreeRTOS API functions.  DO NOT CALL
 INTERRUPT SAFE FREERTOS API FUNCTIONS FROM ANY INTERRUPT THAT HAS A HIGHER
 PRIORITY THAN THIS! (higher priorities are lower numeric values. */
-#if configPRIO_BITS == 3
+#if configPRIO_BITS == 2
+# define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY	1	// 0 is for high priority interrupts that can't make system calls, 1-3 can make system calls
+#elif configPRIO_BITS == 3
 # define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY	3	// 0-2 are for high priority interrupts that can't make system calls, 3-7 can make system calls
 #else
 # define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY	5	// 0-4 are for high priority interrupts that can't make system calls, 5-15 can make system calls
