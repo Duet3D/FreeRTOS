@@ -253,7 +253,8 @@ uint32_t ulSetInterruptMaskFromISR( void )
 					::: "memory"
 				  );
 
-#if !defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
+#if 0	//dc42 the following #if doesn't make sense
+//#if !defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
 	/* To avoid compiler warnings.  The return statement will nevere be reached,
 	but some compilers warn if it is not included, while others won't compile if
 	it is. */
@@ -270,7 +271,8 @@ void vClearInterruptMaskFromISR( __attribute__( ( unused ) ) uint32_t ulMask )
 					::: "memory"
 				  );
 
-#if !defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
+#if 0	//dc42 the following #if doesn't make sense
+//#if !defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
 	/* Just to avoid compiler warning.  ulMask is used from the asm code but
 	the compiler can't see that.  Some compilers generate warnings without the
 	following line, while others generate warnings if the line is included. */
