@@ -255,7 +255,7 @@ uint32_t ulSetInterruptMaskFromISR( void )
 
 #if 0	//dc42 the following #if doesn't make sense
 //#if !defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050)
-	/* To avoid compiler warnings.  The return statement will nevere be reached,
+	/* To avoid compiler warnings.  The return statement will never be reached,
 	but some compilers warn if it is not included, while others won't compile if
 	it is. */
 	return 0;
