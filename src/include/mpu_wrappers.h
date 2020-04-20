@@ -171,7 +171,7 @@ only for ports that are using the MPU. */
 
 #else /* portUSING_MPU_WRAPPERS */
 
-	#define PRIVILEGED_FUNCTION
+	#define PRIVILEGED_FUNCTION		noexcept	// DC this is a convenient way of declaring most FreeRTOS public functions noexcept
 	#define PRIVILEGED_DATA
 	#define portUSING_MPU_WRAPPERS 0
 
