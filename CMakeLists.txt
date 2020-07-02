@@ -19,4 +19,7 @@ if(BOARD STREQUAL "DuetNG") # SAM4E8E, Cortex-M4F
 elseif(BOARD STREQUAL "DuetM")
     target_include_directories(FreeRTOS PUBLIC "src/portable/GCC/ARM_CM3")
     target_sources(FreeRTOS PRIVATE "src/portable/GCC/ARM_CM3/port.c")
+elseif(BOARD STREQUAL "Duet3_V06")
+    target_include_directories(FreeRTOS PUBLIC "src/portable/GCC/ARM_CM7/r0p1")
+    target_sources(FreeRTOS PRIVATE "src/portable/GCC/ARM_CM7/r0p1/port.c")
 endif()
