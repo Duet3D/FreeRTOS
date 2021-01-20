@@ -75,6 +75,7 @@ extern uint32_t SystemCoreClock;
 #define configUSE_APPLICATION_TASK_TAG			0
 #define configUSE_COUNTING_SEMAPHORES			1
 #define configUSE_NEWLIB_REENTRANT 				0	// We'd like to use 1 but that makes the tasks too big because struct _reent is so large
+#define configUSE_TASK_NOTIFICATIONS			1
 
 /* The full demo always has tasks to run so the tick will never be turned off.
 The blinky demo will use the default tickless idle implementation to turn the
