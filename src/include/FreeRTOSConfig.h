@@ -49,10 +49,12 @@ extern uint32_t SystemCoreClock;
 
 #define configUSE_PREEMPTION					1
 
-#if defined(__SAME51N19A__) || defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__) || defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__)
+#if defined(__SAME51N19A__) || defined(__SAME54P20A__) || defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__) || defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__)
 # define configUSE_PORT_OPTIMISED_TASK_SELECTION	1
-#else
+#elif defined(__SAMC21G18A__)
 # define configUSE_PORT_OPTIMISED_TASK_SELECTION	0
+#else
+# error Unsupported processor
 #endif
 
 #define configUSE_QUEUE_SETS					1
@@ -62,13 +64,13 @@ extern uint32_t SystemCoreClock;
 #define configTICK_RATE_HZ						( 1000 )
 #define configMAX_PRIORITIES					( 5 )
 #define configMINIMAL_STACK_SIZE				( ( unsigned short ) 120 )
-#define configTOTAL_HEAP_SIZE					( ( size_t ) ( 1024 ) )
+//#define configTOTAL_HEAP_SIZE					( ( size_t ) ( 1024 ) )
 #define configMAX_TASK_NAME_LEN					( 10 )
-#define configUSE_TRACE_FACILITY				1
+#define configUSE_TRACE_FACILITY				0
 #define configUSE_16_BIT_TICKS					0
 #define configIDLE_SHOULD_YIELD					1
 #define configUSE_MUTEXES						1
-#define configQUEUE_REGISTRY_SIZE				8
+#define configQUEUE_REGISTRY_SIZE				0
 #define configCHECK_FOR_STACK_OVERFLOW			2
 #define configUSE_RECURSIVE_MUTEXES				1
 #define configUSE_MALLOC_FAILED_HOOK			1
@@ -76,6 +78,7 @@ extern uint32_t SystemCoreClock;
 #define configUSE_COUNTING_SEMAPHORES			1
 #define configUSE_NEWLIB_REENTRANT 				0	// We'd like to use 1 but that makes the tasks too big because struct _reent is so large
 #define configUSE_TASK_NOTIFICATIONS			1
+#define configINCLUDE_FREERTOS_TASK_C_ADDITIONS_H	1
 
 /* The full demo always has tasks to run so the tick will never be turned off.
 The blinky demo will use the default tickless idle implementation to turn the
@@ -113,7 +116,7 @@ to exclude the API function. */
 #define INCLUDE_vTaskSuspend			1
 #define INCLUDE_vTaskDelayUntil			1
 #define INCLUDE_vTaskDelay				1
-#define INCLUDE_eTaskGetState			1
+#define INCLUDE_eTaskGetState			0		// we use out own eTaskGetExtendedState function instead
 #define INCLUDE_xTimerPendFunctionCall	0
 #define INCLUDE_uxTaskGetStackHighWaterMark	1
 #define INCLUDE_xQueueGetMutexHolder	1
