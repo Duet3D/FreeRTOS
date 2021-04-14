@@ -177,7 +177,12 @@ only for ports that are using the MPU. */
 
 #else /* portUSING_MPU_WRAPPERS */
 
+# ifdef __cplusplus
+	// DC added noexcept to the following definition to reduce code size when called from C++
+	#define PRIVILEGED_FUNCTION		noexcept
+# else
 	#define PRIVILEGED_FUNCTION
+# endif
 	#define PRIVILEGED_DATA
 	#define FREERTOS_SYSTEM_CALL
 	#define portUSING_MPU_WRAPPERS 0
