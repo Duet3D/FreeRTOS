@@ -86,11 +86,11 @@ tick off. */
 #define configUSE_TICKLESS_IDLE					0
 
 /* Run time stats gathering definitions. */
-void vConfigureTimerForRunTimeStats( void );
-uint32_t ulGetRunTimeCounterValue( void );
-#define configGENERATE_RUN_TIME_STATS	0
-#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS()	(void)0
-#define portGET_RUN_TIME_COUNTER_VALUE()			(0)
+extern uint32_t StepTimerGetTimerTicks(void) noexcept;
+extern uint32_t TaskResetRunTimeCounter(void) noexcept;
+#define configGENERATE_RUN_TIME_STATS	1
+#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS()	(void)TaskResetRunTimeCounter()
+#define portGET_RUN_TIME_COUNTER_VALUE()			StepTimerGetTimerTicks()
 
 /* This demo makes use of one or more example stats formatting functions.  These
 format the raw data provided by the uxTaskGetSystemState() function in to human

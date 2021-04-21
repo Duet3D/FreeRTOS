@@ -40,8 +40,8 @@ typedef struct xEXTENDED_TASK_STATUS
 	const void *pvResource;			/* The resource we are waiting one */
 } ExtendedTaskStatus_t;
 
-void vTaskGetExtendedInfo( TaskHandle_t xTask, ExtendedTaskStatus_t *pxTaskStatus );
-eExtendedTaskState eTaskGetExtendedState( TaskHandle_t xTask, const void **pvResource );
+void vTaskGetExtendedInfo( TaskHandle_t xTask, ExtendedTaskStatus_t *pxTaskStatus ) noexcept;
+eExtendedTaskState eTaskGetExtendedState( TaskHandle_t xTask, const void **pvResource ) noexcept;
 
 #ifdef __cplusplus
 }
