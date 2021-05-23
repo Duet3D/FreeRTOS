@@ -116,7 +116,7 @@ to exclude the API function. */
 #define INCLUDE_vTaskSuspend			1
 #define INCLUDE_vTaskDelayUntil			1
 #define INCLUDE_vTaskDelay				1
-#define INCLUDE_eTaskGetState			0		// we use out own eTaskGetExtendedState function instead
+#define INCLUDE_eTaskGetState			0		// we use our own eTaskGetExtendedState function instead
 #define INCLUDE_xTimerPendFunctionCall	0
 #define INCLUDE_uxTaskGetStackHighWaterMark	1
 #define INCLUDE_xQueueGetMutexHolder	1
