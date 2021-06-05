@@ -136,8 +136,7 @@ to exclude the API function. */
 	#error Unknown value for configPRIO_BITS
 #endif
 
-/* The lowest interrupt priority that can be used in a call to a "set priority"
-function. */
+/* The lowest interrupt priority that can be used in a call to a "set priority" function. */
 #define configLIBRARY_LOWEST_INTERRUPT_PRIORITY			0xf
 
 /* The highest interrupt priority that can be used by any interrupt service
@@ -146,10 +145,8 @@ INTERRUPT SAFE FREERTOS API FUNCTIONS FROM ANY INTERRUPT THAT HAS A HIGHER
 PRIORITY THAN THIS! (higher priorities are lower numeric values. */
 #if configPRIO_BITS == 2
 # define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY	1	// 0 is for high priority interrupts that can't make system calls, 1-3 can make system calls
-#elif configPRIO_BITS == 3
-# define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY	3	// 0-2 are for high priority interrupts that can't make system calls, 3-7 can make system calls
 #else
-# define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY	5	// 0-4 are for high priority interrupts that can't make system calls, 5-15 can make system calls
+# define configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY	3	// 0-2 are for high priority interrupts that can't make system calls, 3-7 or 3-15 can make system calls
 #endif
 
 /* Interrupt priorities used by the kernel port layer itself.  These are generic
@@ -159,16 +156,16 @@ to all Cortex-M ports, and do not rely on any particular library functions. */
 See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */
 #define configMAX_SYSCALL_INTERRUPT_PRIORITY 	( configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY << (8 - configPRIO_BITS) )
 
-/* Normal assert() semantics without relying on the provision of an assert.h
-header file. */
+/* Normal assert() semantics without relying on the provision of an assert.h header file. */
 extern void vAssertCalled( uint32_t ulLine, const char *pcFile ) noexcept __attribute__((noreturn));
 #define configASSERT( x ) if( ( x ) == 0 ) vAssertCalled( __LINE__, __FILE__ )
 
-/* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS
-standard names. */
+/* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS standard names. */
 #define xPortPendSVHandler PendSV_Handler
 #define vPortSVCHandler SVC_Handler
 #define xPortSysTickHandler SysTick_Handler
+
+#if 0	// RRF doesn't use FreeRTOS+TCP of FreeRTOS_CLI
 
 /* The priority used by the Ethernet MAC driver interrupt. */
 #define configMAC_INTERRUPT_PRIORITY	( configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY )
@@ -177,6 +174,8 @@ standard names. */
 interpreter.  See the FreeRTOS+CLI documentation for more information:
 http://www.FreeRTOS.org/FreeRTOS-Plus/FreeRTOS_Plus_CLI/ */
 #define configCOMMAND_INT_MAX_OUTPUT_SIZE		1024
+
+#endif
 
 /* If configINCLUDE_DEMO_DEBUG_STATS is set to one, then a few basic IP trace
 macros are defined to gather some UDP stack statistics that can then be viewed
