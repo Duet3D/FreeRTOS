@@ -1147,7 +1147,7 @@ typedef struct xSTATIC_TCB
 		uint32_t 		ulDummy18;
 		uint8_t 		ucDummy19;
 	#endif
-	#if ( tskSTATIC_AND_DYNAMIC_ALLOCATION_POSSIBLE != 0 )
+	#if ( tskSTATIC_AND_DYNAMIC_ALLOCATION_POSSIBLE )
 		uint8_t			uxDummy20;
 	#endif
 
