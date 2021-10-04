@@ -159,4 +159,10 @@ const TCB_t * const pxTCB = xTask;
 	return eReturn;
 } /*lint !e818 xTask cannot be a pointer to const because it is a typedef. */
 
+// Return the stack base of the currently-executing task
+const StackType_t *pxTaskGetCurrentStackBase() noexcept
+{
+	return pxCurrentTCB->pxStack;
+}
 
+// End

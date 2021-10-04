@@ -42,6 +42,7 @@ typedef struct xEXTENDED_TASK_STATUS
 
 void vTaskGetExtendedInfo( TaskHandle_t xTask, ExtendedTaskStatus_t *pxTaskStatus ) noexcept;
 eExtendedTaskState eTaskGetExtendedState( TaskHandle_t xTask, const void **pvResource ) noexcept;
+const StackType_t *pxTaskGetCurrentStackBase() noexcept;
 
 #ifdef __cplusplus
 }
