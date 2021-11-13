@@ -130,7 +130,7 @@ typedef struct MPU_SETTINGS
 	__asm volatile( "isb" );													\
 }
 
-#define portNVIC_INT_CTRL_REG		( * ( ( volatile uint32_t * ) 0xe000ed04 ) )
+#define portNVIC_INT_CTRL_REG		( * ( ( volatile uint32_t * ) 0xe000ed04u ) )
 #define portNVIC_PENDSVSET_BIT		( 1UL << 28UL )
 #define portEND_SWITCHING_ISR( xSwitchRequired ) if( xSwitchRequired ) portNVIC_INT_CTRL_REG = portNVIC_PENDSVSET_BIT
 #define portYIELD_FROM_ISR( x ) portEND_SWITCHING_ISR( x )
