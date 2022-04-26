@@ -49,7 +49,7 @@ extern uint32_t SystemCoreClock;
 
 #define configUSE_PREEMPTION					1
 
-#if defined(__SAME51N19A__) || defined(__SAME51G19A__) || defined(__SAME54P20A__) || defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__) || defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__)
+#if defined(__SAME51N19A__) || defined(__SAME51G19A__) || defined(__SAME54P20A__) || defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__) || defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__) || defined(__SAMD51N19A__)
 # define configUSE_PORT_OPTIMISED_TASK_SELECTION	1
 #elif defined(__SAMC21G18A__)
 # define configUSE_PORT_OPTIMISED_TASK_SELECTION	0
@@ -126,7 +126,7 @@ to exclude the API function. */
 #ifdef __NVIC_PRIO_BITS
 	/* __NVIC_PRIO_BITS will be specified when CMSIS is being used. */
 	#define configPRIO_BITS       		__NVIC_PRIO_BITS
-#elif defined(__SAME51N19A__) || defined(__SAME51G19A__) || defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__) || defined(__SAME54P20A__)
+#elif defined(__SAME51N19A__) || defined(__SAME51G19A__) || defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__) || defined(__SAME54P20A__) || defined(__SAMD51N19A__)
 	#define configPRIO_BITS       		3        /* 7 priority levels */
 #elif defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__)
 	#define configPRIO_BITS       		4        /* 15 priority levels */
