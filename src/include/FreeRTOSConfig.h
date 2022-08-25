@@ -161,9 +161,16 @@ extern void vAssertCalled( uint32_t ulLine, const char *pcFile ) noexcept __attr
 #define configASSERT( x ) if( ( x ) == 0 ) vAssertCalled( __LINE__, __FILE__ )
 
 /* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS standard names. */
+
+#ifdef __RP2040__
+#define xPortPendSVHandler isr_pendsv
+#define vPortSVCHandler isr_svcall
+#define xPortSysTickHandler isr_systick			// the name used in the Pico sdk
+#else
 #define xPortPendSVHandler PendSV_Handler
 #define vPortSVCHandler SVC_Handler
-#define xPortSysTickHandler SysTick_Handler
+#define xPortSysTickHandler SysTick_Handler		// the name used by everything else
+#endif
 
 #if 0	// RRF doesn't use FreeRTOS+TCP of FreeRTOS_CLI
 
