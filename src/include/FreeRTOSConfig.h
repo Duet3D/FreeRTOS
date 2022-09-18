@@ -172,7 +172,7 @@ extern void vAssertCalled( uint32_t ulLine, const char *pcFile ) noexcept __attr
 #define xPortSysTickHandler SysTick_Handler		// the name used by everything else
 #endif
 
-#if 0	// RRF doesn't use FreeRTOS+TCP of FreeRTOS_CLI
+#if 0	// RRF doesn't use FreeRTOS+TCP or FreeRTOS_CLI
 
 /* The priority used by the Ethernet MAC driver interrupt. */
 #define configMAC_INTERRUPT_PRIORITY	( configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY )
