@@ -5153,7 +5153,11 @@ TickType_t uxReturn;
 		{
 			/* Return the notification as it was before the bits were cleared,
 			then clear the bit mask. */
+#if 1	// DC bug fix
+			ulReturn = pxTCB->ulNotifiedValue;
+#else
 			ulReturn = pxCurrentTCB->ulNotifiedValue;
+#endif
 			pxTCB->ulNotifiedValue &= ~ulBitsToClear;
 		}
 		taskEXIT_CRITICAL();
