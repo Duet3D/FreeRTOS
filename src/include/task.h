@@ -1015,7 +1015,7 @@ void vTaskGetInfo( TaskHandle_t xTask, TaskStatus_t *pxTaskStatus, BaseType_t xG
  * \defgroup vTaskPrioritySet vTaskPrioritySet
  * \ingroup TaskCtrl
  */
-void vTaskPrioritySet( TaskHandle_t xTask, UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+void vTaskPrioritySet( TaskHandle_t _ecv_null xTask, UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
 
 /**
  * task. h
@@ -2204,7 +2204,7 @@ uint32_t ulTaskNotifyTake( BaseType_t xClearCountOnExit, TickType_t xTicksToWait
  * \defgroup xTaskNotifyStateClear xTaskNotifyStateClear
  * \ingroup TaskNotifications
  */
-BaseType_t xTaskNotifyStateClear( TaskHandle_t xTask );
+BaseType_t xTaskNotifyStateClear( TaskHandle_t _ecv_null xTask );
 
 /**
 * task. h
@@ -2222,7 +2222,7 @@ BaseType_t xTaskNotifyStateClear( TaskHandle_t xTask );
 * \defgroup ulTaskNotifyValueClear ulTaskNotifyValueClear
 * \ingroup TaskNotifications
 */
-uint32_t ulTaskNotifyValueClear( TaskHandle_t xTask, uint32_t ulBitsToClear ) PRIVILEGED_FUNCTION;
+uint32_t ulTaskNotifyValueClear( TaskHandle_t _ecv_null xTask, uint32_t ulBitsToClear ) PRIVILEGED_FUNCTION;
 
 /**
  * task.h
