@@ -919,8 +919,14 @@ UBaseType_t x;
 		pxNewTCB->pcTaskName[ 0 ] = 0x00;
 	}
 
+#if 1	/* DC ported fix from later version */
+    /* This is used as an array index so must ensure it's not too large. */
+    configASSERT( uxPriority < configMAX_PRIORITIES );
+
+#else
 	/* This is used as an array index so must ensure it's not too large.  First
 	remove the privilege bit if one is present. */
+#endif
 	if( uxPriority >= ( UBaseType_t ) configMAX_PRIORITIES )
 	{
 		uxPriority = ( UBaseType_t ) configMAX_PRIORITIES - ( UBaseType_t ) 1U;
