@@ -62,7 +62,7 @@ extern uint32_t SystemCoreClock;
 #define configUSE_TICK_HOOK						1
 #define configCPU_CLOCK_HZ						( SystemCoreClock )
 #define configTICK_RATE_HZ						( 1000 )
-#define configMAX_PRIORITIES					( 16 )
+#define configMAX_PRIORITIES					( 8 )	// each priority level used 20 bytes of RAM, so don't make this too large
 #define configMINIMAL_STACK_SIZE				( ( unsigned short ) 120 )
 //#define configTOTAL_HEAP_SIZE					( ( size_t ) ( 1024 ) )
 #define configMAX_TASK_NAME_LEN					( 10 )
