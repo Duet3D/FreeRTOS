@@ -140,7 +140,7 @@ extern uint32_t SystemCoreClock;
  * configTASK_NOTIFICATION_ARRAY_ENTRIES sets the number of indexes in the array.
  * See https://www.freertos.org/RTOS-task-notifications.html  Defaults to 1 if
  * left undefined. */
-#define configTASK_NOTIFICATION_ARRAY_ENTRIES      1
+#define configTASK_NOTIFICATION_ARRAY_ENTRIES      8
 
 /* configQUEUE_REGISTRY_SIZE sets the maximum number of queues and semaphores
  * that can be referenced from the queue registry.  Only required when using a
