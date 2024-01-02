@@ -5,6 +5,7 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828" moduleId="org.eclipse.cdt.core.settings" name="SAM4E">
 				<externalSettings>
 					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/FreeRTOS"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/FreeRTOS/SAM4E"/>
 						<entry flags="RESOLVED" kind="libraryFile" name="FreeRTOS" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
@@ -57,7 +58,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="src/portable/GCC/ARM_CM0|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU|src/portable/GCC/ARM_CM3" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="src/portable/GCC/ARM7_LPC23xx|src/portable/GCC/ARM7_LPC2000|src/portable/GCC/ARM_CRx_No_GIC|src/portable/GCC/ARM_CR5|src/portable/GCC/ARM_CM85_NTZ|src/portable/GCC/ARM_CM85|src/portable/GCC/ARM_CM55_NTZ|src/portable/GCC/ARM_CM55|src/portable/GCC/ARM_CM35P_NTZ|src/portable/GCC/ARM_CM35P|src/portable/GCC/ARM_CM33_NTZ|src/portable/GCC/ARM_CM33|src/portable/GCC/ARM_CM23_NTZ|src/portable/GCC/ARM_CM23|src/portable/GCC/ARM_CA9|src/portable/GCC/ARM_CA53_64_BIT_SRE|src/portable/GCC/ARM_CA53_64_BIT|src/portable/GCC/Arm_AARCH64_SRE|src/portable/GCC/Arm_AARCH64|src/portable/GCC/ARM_CM0|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU|src/portable/GCC/ARM_CM3" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -67,6 +68,7 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.400703681" moduleId="org.eclipse.cdt.core.settings" name="SAM4S">
 				<externalSettings>
 					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/FreeRTOS"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/FreeRTOS/SAM4S"/>
 						<entry flags="RESOLVED" kind="libraryFile" name="FreeRTOS" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
@@ -119,7 +121,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="src/portable/GCC/ARM_CM0|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="src/portable/GCC/ARM7_LPC23xx|src/portable/GCC/ARM7_LPC2000|src/portable/GCC/ARM_CRx_No_GIC|src/portable/GCC/ARM_CR5|src/portable/GCC/ARM_CM85_NTZ|src/portable/GCC/ARM_CM85|src/portable/GCC/ARM_CM55_NTZ|src/portable/GCC/ARM_CM55|src/portable/GCC/ARM_CM35P_NTZ|src/portable/GCC/ARM_CM35P|src/portable/GCC/ARM_CM33_NTZ|src/portable/GCC/ARM_CM33|src/portable/GCC/ARM_CM23_NTZ|src/portable/GCC/ARM_CM23|src/portable/GCC/ARM_CA9|src/portable/GCC/ARM_CA53_64_BIT_SRE|src/portable/GCC/ARM_CA53_64_BIT|src/portable/GCC/Arm_AARCH64_SRE|src/portable/GCC/Arm_AARCH64|src/portable/GCC/ARM_CM0|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -129,6 +131,7 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.694459458" moduleId="org.eclipse.cdt.core.settings" name="SAME70">
 				<externalSettings>
 					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/FreeRTOS"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/FreeRTOS/SAME70"/>
 						<entry flags="RESOLVED" kind="libraryFile" name="FreeRTOS" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
@@ -182,7 +185,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="src/portable/GCC/ARM_CM0|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU|src/portable/GCC/ARM_CM3" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="src/portable/GCC/ARM7_LPC23xx|src/portable/GCC/ARM7_LPC2000|src/portable/GCC/ARM_CRx_No_GIC|src/portable/GCC/ARM_CR5|src/portable/GCC/ARM_CM85_NTZ|src/portable/GCC/ARM_CM85|src/portable/GCC/ARM_CM55_NTZ|src/portable/GCC/ARM_CM55|src/portable/GCC/ARM_CM35P_NTZ|src/portable/GCC/ARM_CM35P|src/portable/GCC/ARM_CM33_NTZ|src/portable/GCC/ARM_CM33|src/portable/GCC/ARM_CM23_NTZ|src/portable/GCC/ARM_CM23|src/portable/GCC/ARM_CA9|src/portable/GCC/ARM_CA53_64_BIT_SRE|src/portable/GCC/ARM_CA53_64_BIT|src/portable/GCC/Arm_AARCH64_SRE|src/portable/GCC/Arm_AARCH64|src/portable/GCC/ARM_CM0|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU|src/portable/GCC/ARM_CM3" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -192,6 +195,7 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.400703681.868606568" moduleId="org.eclipse.cdt.core.settings" name="SAM3X">
 				<externalSettings>
 					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/FreeRTOS"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/FreeRTOS/SAM3X"/>
 						<entry flags="RESOLVED" kind="libraryFile" name="FreeRTOS" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
@@ -244,7 +248,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="src/portable/GCC/ARM_CM0|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="src/portable/GCC/ARM7_LPC23xx|src/portable/GCC/ARM7_LPC2000|src/portable/GCC/ARM_CRx_No_GIC|src/portable/GCC/ARM_CR5|src/portable/GCC/ARM_CM85_NTZ|src/portable/GCC/ARM_CM85|src/portable/GCC/ARM_CM55_NTZ|src/portable/GCC/ARM_CM55|src/portable/GCC/ARM_CM35P_NTZ|src/portable/GCC/ARM_CM35P|src/portable/GCC/ARM_CM33_NTZ|src/portable/GCC/ARM_CM33|src/portable/GCC/ARM_CM23_NTZ|src/portable/GCC/ARM_CM23|src/portable/GCC/ARM_CA9|src/portable/GCC/ARM_CA53_64_BIT_SRE|src/portable/GCC/ARM_CA53_64_BIT|src/portable/GCC/Arm_AARCH64_SRE|src/portable/GCC/Arm_AARCH64|src/portable/GCC/ARM_CM0|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -254,6 +258,7 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.1418259088" moduleId="org.eclipse.cdt.core.settings" name="SAME51">
 				<externalSettings>
 					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/FreeRTOS"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/FreeRTOS/SAME51"/>
 						<entry flags="RESOLVED" kind="libraryFile" name="FreeRTOS" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
@@ -306,7 +311,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="src/portable/GCC/ARM_CM0|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU|src/portable/GCC/ARM_CM3" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="src/portable/GCC/ARM7_LPC23xx|src/portable/GCC/ARM7_LPC2000|src/portable/GCC/ARM_CRx_No_GIC|src/portable/GCC/ARM_CR5|src/portable/GCC/ARM_CM85_NTZ|src/portable/GCC/ARM_CM85|src/portable/GCC/ARM_CM55_NTZ|src/portable/GCC/ARM_CM55|src/portable/GCC/ARM_CM35P_NTZ|src/portable/GCC/ARM_CM35P|src/portable/GCC/ARM_CM33_NTZ|src/portable/GCC/ARM_CM33|src/portable/GCC/ARM_CM23_NTZ|src/portable/GCC/ARM_CM23|src/portable/GCC/ARM_CA9|src/portable/GCC/ARM_CA53_64_BIT_SRE|src/portable/GCC/ARM_CA53_64_BIT|src/portable/GCC/Arm_AARCH64_SRE|src/portable/GCC/Arm_AARCH64|src/portable/GCC/ARM_CM0|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU|src/portable/GCC/ARM_CM3" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -316,6 +321,7 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.400703681.868606568.397628533" moduleId="org.eclipse.cdt.core.settings" name="SAMC21">
 				<externalSettings>
 					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/FreeRTOS"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/FreeRTOS/SAMC21"/>
 						<entry flags="RESOLVED" kind="libraryFile" name="FreeRTOS" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
@@ -370,7 +376,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="src/portable/GCC/ARM_CM3|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="src/portable/GCC/ARM7_LPC23xx|src/portable/GCC/ARM7_LPC2000|src/portable/GCC/ARM_CRx_No_GIC|src/portable/GCC/ARM_CR5|src/portable/GCC/ARM_CM85_NTZ|src/portable/GCC/ARM_CM85|src/portable/GCC/ARM_CM55_NTZ|src/portable/GCC/ARM_CM55|src/portable/GCC/ARM_CM35P_NTZ|src/portable/GCC/ARM_CM35P|src/portable/GCC/ARM_CM33_NTZ|src/portable/GCC/ARM_CM33|src/portable/GCC/ARM_CM23_NTZ|src/portable/GCC/ARM_CM23|src/portable/GCC/ARM_CA9|src/portable/GCC/ARM_CA53_64_BIT_SRE|src/portable/GCC/ARM_CA53_64_BIT|src/portable/GCC/Arm_AARCH64_SRE|src/portable/GCC/Arm_AARCH64|src/portable/GCC/ARM_CM3|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -380,6 +386,7 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.1418259088.1622987963" moduleId="org.eclipse.cdt.core.settings" name="SAME51_Debug">
 				<externalSettings>
 					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/FreeRTOS"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/FreeRTOS/SAME51_Debug"/>
 						<entry flags="RESOLVED" kind="libraryFile" name="FreeRTOS" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
@@ -432,7 +439,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="src/portable/GCC/ARM_CM0|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU|src/portable/GCC/ARM_CM3" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="src/portable/GCC/ARM7_LPC23xx|src/portable/GCC/ARM7_LPC2000|src/portable/GCC/ARM_CRx_No_GIC|src/portable/GCC/ARM_CR5|src/portable/GCC/ARM_CM85_NTZ|src/portable/GCC/ARM_CM85|src/portable/GCC/ARM_CM55_NTZ|src/portable/GCC/ARM_CM55|src/portable/GCC/ARM_CM35P_NTZ|src/portable/GCC/ARM_CM35P|src/portable/GCC/ARM_CM33_NTZ|src/portable/GCC/ARM_CM33|src/portable/GCC/ARM_CM23_NTZ|src/portable/GCC/ARM_CM23|src/portable/GCC/ARM_CA9|src/portable/GCC/ARM_CA53_64_BIT_SRE|src/portable/GCC/ARM_CA53_64_BIT|src/portable/GCC/Arm_AARCH64_SRE|src/portable/GCC/Arm_AARCH64|src/portable/GCC/ARM_CM0|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU|src/portable/GCC/ARM_CM3" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -442,6 +449,7 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.694459458.349500379" moduleId="org.eclipse.cdt.core.settings" name="SAME70_Debug">
 				<externalSettings>
 					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/FreeRTOS"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/FreeRTOS/SAME70_Debug"/>
 						<entry flags="RESOLVED" kind="libraryFile" name="FreeRTOS" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
@@ -495,7 +503,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="src/portable/GCC/ARM_CM0|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU|src/portable/GCC/ARM_CM3" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="src/portable/GCC/ARM7_LPC23xx|src/portable/GCC/ARM7_LPC2000|src/portable/GCC/ARM_CRx_No_GIC|src/portable/GCC/ARM_CR5|src/portable/GCC/ARM_CM85_NTZ|src/portable/GCC/ARM_CM85|src/portable/GCC/ARM_CM55_NTZ|src/portable/GCC/ARM_CM55|src/portable/GCC/ARM_CM35P_NTZ|src/portable/GCC/ARM_CM35P|src/portable/GCC/ARM_CM33_NTZ|src/portable/GCC/ARM_CM33|src/portable/GCC/ARM_CM23_NTZ|src/portable/GCC/ARM_CM23|src/portable/GCC/ARM_CA9|src/portable/GCC/ARM_CA53_64_BIT_SRE|src/portable/GCC/ARM_CA53_64_BIT|src/portable/GCC/Arm_AARCH64_SRE|src/portable/GCC/Arm_AARCH64|src/portable/GCC/ARM_CM0|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU|src/portable/GCC/ARM_CM3" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -505,6 +513,7 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.487753828.400703681.868606568.397628533.561799939" moduleId="org.eclipse.cdt.core.settings" name="SAMC21_Debug">
 				<externalSettings>
 					<externalSetting>
+						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/FreeRTOS"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/FreeRTOS/SAMC21_Debug"/>
 						<entry flags="RESOLVED" kind="libraryFile" name="FreeRTOS" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
@@ -559,7 +568,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="src/portable/GCC/ARM_CM3|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="src/portable/GCC/ARM7_LPC23xx|src/portable/GCC/ARM7_LPC2000|src/portable/GCC/ARM_CRx_No_GIC|src/portable/GCC/ARM_CR5|src/portable/GCC/ARM_CM85_NTZ|src/portable/GCC/ARM_CM85|src/portable/GCC/ARM_CM55_NTZ|src/portable/GCC/ARM_CM55|src/portable/GCC/ARM_CM35P_NTZ|src/portable/GCC/ARM_CM35P|src/portable/GCC/ARM_CM33_NTZ|src/portable/GCC/ARM_CM33|src/portable/GCC/ARM_CM23_NTZ|src/portable/GCC/ARM_CM23|src/portable/GCC/ARM_CA9|src/portable/GCC/ARM_CA53_64_BIT_SRE|src/portable/GCC/ARM_CA53_64_BIT|src/portable/GCC/Arm_AARCH64_SRE|src/portable/GCC/Arm_AARCH64|src/portable/GCC/ARM_CM3|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -624,7 +633,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="src/portable/GCC/ARM_CM3|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="src/portable/GCC/ARM7_LPC23xx|src/portable/GCC/ARM7_LPC2000|src/portable/GCC/ARM_CRx_No_GIC|src/portable/GCC/ARM_CR5|src/portable/GCC/ARM_CM85_NTZ|src/portable/GCC/ARM_CM85|src/portable/GCC/ARM_CM55_NTZ|src/portable/GCC/ARM_CM55|src/portable/GCC/ARM_CM35P_NTZ|src/portable/GCC/ARM_CM35P|src/portable/GCC/ARM_CM33_NTZ|src/portable/GCC/ARM_CM33|src/portable/GCC/ARM_CM23_NTZ|src/portable/GCC/ARM_CM23|src/portable/GCC/ARM_CA9|src/portable/GCC/ARM_CA53_64_BIT_SRE|src/portable/GCC/ARM_CA53_64_BIT|src/portable/GCC/Arm_AARCH64_SRE|src/portable/GCC/Arm_AARCH64|src/portable/GCC/ARM_CM3|src/portable/GCC/ARM_CM4F|src/portable/MemMang/heap_1.c|src/croutine.c|src/portable/MemMang/heap_3.c|src/portable/MemMang/heap_2.c|src/portable/MemMang/heap_4.c|src/portable/MemMang/heap_5.c|src/portable/Common|src/portable/Tasking|src/portable/GCC/ARM7_AT91SAM7S|src/portable/GCC/ARM7_AT91FR40008|src/portable/GCC/ARM_CM7|src/portable/GCC/ARM_CM4_MPU|src/portable/GCC/ARM_CM3_MPU" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

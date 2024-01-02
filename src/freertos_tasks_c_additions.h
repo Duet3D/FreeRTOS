@@ -92,13 +92,17 @@ const TCB_t * const pxTCB = xTask;
 				*pvResource = listLIST_ITEM_CONTAINER( &( pxTCB->xEventListItem ) );
 				eReturn = esResourceWaiting;
 			}
-			else if ( pxTCB->ucNotifyState == taskWAITING_NOTIFICATION )
-			{
-				eReturn = esNotifyWaiting;
-			}
 			else
 			{
-				eReturn = esDelaying;
+				eReturn = esDelaying;				// assume it is delaying if we don't find that it is waiting for notification
+	            for ( size_t x = ( BaseType_t ) 0; x < ( BaseType_t ) configTASK_NOTIFICATION_ARRAY_ENTRIES; x++ )
+	            {
+	                if ( pxTCB->ucNotifyState[ x ] == taskWAITING_NOTIFICATION )
+	                {
+	                	eReturn = esNotifyWaiting;
+	                    break;
+	                }
+	            }
 			}
 		}
 
@@ -116,13 +120,14 @@ const TCB_t * const pxTCB = xTask;
 						and of the RTOS objects, but could still be in the
 						blocked state if it is waiting on its notification
 						rather than waiting on an object. */
-						if ( pxTCB->ucNotifyState == taskWAITING_NOTIFICATION )
+						eReturn = esSuspended;				// assume it is suspended unless we find it is notify waiting
+						for ( size_t x = ( BaseType_t ) 0; x < ( BaseType_t ) configTASK_NOTIFICATION_ARRAY_ENTRIES; x++ )
 						{
-							eReturn = esNotifyWaiting;
-						}
-						else
-						{
-							eReturn = esSuspended;
+							if ( pxTCB->ucNotifyState[ x ] == taskWAITING_NOTIFICATION )
+							{
+								eReturn = esNotifyWaiting;
+								break;
+							}
 						}
 					}
 					#else
