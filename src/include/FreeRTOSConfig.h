@@ -552,7 +552,7 @@ extern void vAssertCalled( uint32_t ulLine, const char *pcFile ) noexcept __attr
  * The application can provide it's own implementation of
  * vApplicationGetIdleTaskMemory() and vApplicationGetTimerTaskMemory() by
  * setting configKERNEL_PROVIDED_STATIC_MEMORY to 0 or leaving it undefined. */
-#define configKERNEL_PROVIDED_STATIC_MEMORY    1
+#define configKERNEL_PROVIDED_STATIC_MEMORY    0
 
 /******************************************************************************/
 /* Definitions that include or exclude functionality. *************************/
@@ -587,14 +587,11 @@ extern void vAssertCalled( uint32_t ulLine, const char *pcFile ) noexcept __attr
 #define INCLUDE_xTaskAbortDelay                0
 #define INCLUDE_xTaskGetHandle                 0
 #define INCLUDE_xTaskResumeFromISR             1
+#define INCLUDE_xQueueGetMutexHolder		   1
 
 // Extra bits for RRF
 #define configINCLUDE_FREERTOS_TASK_C_ADDITIONS_H	1
-#define configENABLE_TRUSTZONE			0
-
-/* Set the following definitions to 1 to include the API function, or zero
-to exclude the API function. */
-#define INCLUDE_xQueueGetMutexHolder	1
+#define configENABLE_TRUSTZONE					0
 
 /* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS standard names. */
 

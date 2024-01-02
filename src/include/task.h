@@ -1940,7 +1940,7 @@ char * pcTaskGetName( TaskHandle_t xTaskToQuery ) PRIVILEGED_FUNCTION;
     /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-86 */
     /* coverity[misra_c_2012_rule_8_6_violation] */
     void vApplicationStackOverflowHook( TaskHandle_t xTask,
-                                        char * pcTaskName );
+                                        char * pcTaskName ) noexcept;		//DC added noexcept
 
 #endif
 
@@ -1978,7 +1978,7 @@ char * pcTaskGetName( TaskHandle_t xTaskToQuery ) PRIVILEGED_FUNCTION;
     /* MISRA Ref 8.6.1 [External linkage] */
     /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-86 */
     /* coverity[misra_c_2012_rule_8_6_violation] */
-    void vApplicationTickHook( void );
+    void vApplicationTickHook( void ) noexcept;		//DC added noexcept
 
 #endif
 
@@ -1999,7 +1999,7 @@ char * pcTaskGetName( TaskHandle_t xTaskToQuery ) PRIVILEGED_FUNCTION;
  */
     void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer,
                                         StackType_t ** ppxIdleTaskStackBuffer,
-                                        uint32_t * pulIdleTaskStackSize );
+                                        uint32_t * pulIdleTaskStackSize ) noexcept;		//DC added noexcept
 
 /**
  * task.h
