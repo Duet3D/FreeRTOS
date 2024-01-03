@@ -45,7 +45,7 @@ TCB_t *pxTCB;
 	}
 	#endif
 
-	pxTaskStatus->eCurrentState = eTaskGetExtendedState( pxTCB, &(pxTaskStatus->pvResource) );
+	pxTaskStatus->eCurrentState = eTaskGetExtendedState( pxTCB, &(pxTaskStatus->pvResource), &(pxTaskStatus->notifyIndex) );
 
 	#if ( portSTACK_GROWTH > 0 )
 	{
@@ -59,7 +59,7 @@ TCB_t *pxTCB;
 }
 
 // This is like xTaskGetState except that it returns an extended status along with the identity of the resource it is waiting for
-eExtendedTaskState eTaskGetExtendedState( TaskHandle_t xTask, const void **pvResource )
+eExtendedTaskState eTaskGetExtendedState( TaskHandle_t xTask, const void **pvResource, uint32_t *notifyIndex )
 {
 eExtendedTaskState eReturn;
 List_t const * pxStateList, *pxDelayedList, *pxOverflowedDelayedList;
@@ -99,6 +99,7 @@ const TCB_t * const pxTCB = xTask;
 	            {
 	                if ( pxTCB->ucNotifyState[ x ] == taskWAITING_NOTIFICATION )
 	                {
+	                	*notifyIndex = x;
 	                	eReturn = esNotifyWaiting;
 	                    break;
 	                }
@@ -125,6 +126,7 @@ const TCB_t * const pxTCB = xTask;
 						{
 							if ( pxTCB->ucNotifyState[ x ] == taskWAITING_NOTIFICATION )
 							{
+			                	*notifyIndex = x;
 								eReturn = esNotifyWaiting;
 								break;
 							}

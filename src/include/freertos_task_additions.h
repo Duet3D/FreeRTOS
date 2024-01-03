@@ -38,10 +38,11 @@ typedef struct xEXTENDED_TASK_STATUS
 	StackType_t *pxStackBase;		/* Points to the lowest address of the task's stack area. */
 	configSTACK_DEPTH_TYPE usStackHighWaterMark;	/* The minimum amount of stack space that has remained for the task since the task was created.  The closer this value is to zero the closer the task has come to overflowing its stack. */
 	const void *pvResource;			/* The resource we are waiting one */
+	uint32_t notifyIndex;			/* If we are waiting to be notified, the index we are waiting on */
 } ExtendedTaskStatus_t;
 
 void vTaskGetExtendedInfo( TaskHandle_t xTask, ExtendedTaskStatus_t *pxTaskStatus ) noexcept;
-eExtendedTaskState eTaskGetExtendedState( TaskHandle_t xTask, const void **pvResource ) noexcept;
+eExtendedTaskState eTaskGetExtendedState( TaskHandle_t xTask, const void **pvResource, uint32_t *notifyIndex ) noexcept;
 const StackType_t *pxTaskGetCurrentStackBase() noexcept;
 const volatile StackType_t *pxTaskGetLastStackTop(TaskHandle_t xTask) noexcept;
 
