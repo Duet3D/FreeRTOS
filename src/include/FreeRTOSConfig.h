@@ -87,7 +87,7 @@ extern uint32_t SystemCoreClock;
  * undefined. */
 #if defined(__SAME51N19A__) || defined(__SAME51G19A__) || defined(__SAME54P20A__) || defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__) || defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__) || defined(__SAMD51N19A__)
 # define configUSE_PORT_OPTIMISED_TASK_SELECTION	1
-#elif defined(__SAMC21G18A__) || defined(__RP2040__)
+#elif defined(__SAMC21G18A__) || defined(__RP2040__) || defined(__RP2350__)
 # define configUSE_PORT_OPTIMISED_TASK_SELECTION	0
 #else
 # error Unsupported processor
@@ -286,10 +286,15 @@ extern uint32_t SystemCoreClock;
 	#define configPRIO_BITS       		3        /* 7 priority levels */
 #elif defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__)
 	#define configPRIO_BITS       		4        /* 15 priority levels */
-#elif defined(__SAMC21G18A__) || defined(__RP2040__)
+#elif defined(__SAMC21G18A__) || defined(__RP2040__) || defined(__RP2350__)
 #	define configPRIO_BITS       		2        /* 4 priority levels */
 #else
 	#error Unknown value for configPRIO_BITS
+#endif
+
+#if defined(__RP2350__)
+#define configENABLE_FPU 1
+#define configENABLE_MPU 0
 #endif
 
 /* The lowest interrupt priority that can be used in a call to a "set priority" function. */
@@ -597,7 +602,7 @@ extern void vAssertCalled( uint32_t ulLine, const char *pcFile ) noexcept __attr
 
 /* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS standard names. */
 
-#ifdef __RP2040__
+#if defined(__RP2040__) || defined(__RP2350__)
 #define xPortPendSVHandler isr_pendsv
 #define vPortSVCHandler isr_svcall
 #define xPortSysTickHandler isr_systick			// the name used in the Pico sdk
