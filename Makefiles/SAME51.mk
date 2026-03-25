@@ -33,14 +33,10 @@ SAME51_CFLAGS := -c -std=gnu99 \
 	-fdata-sections \
 	-nostdlib \
 	-Wall \
-	-Werror \
 	-Wundef \
-	-Wwrite-strings \
 	-Wdouble-promotion \
-	-Werror=return-type \
 	-fsingle-precision-constant \
 	-fstack-usage \
-	-fdump-rtl-expand \
 	$(SAME51_INCLUDES) \
 	$(SAME51_DEFINES)
 
