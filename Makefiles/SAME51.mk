@@ -37,6 +37,7 @@ SAME51_CFLAGS := -c -std=gnu99 \
 	-Wdouble-promotion \
 	-fsingle-precision-constant \
 	-fstack-usage \
+	-fdump-rtl-expand \
 	$(SAME51_INCLUDES) \
 	$(SAME51_DEFINES)
 

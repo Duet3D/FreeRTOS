@@ -35,13 +35,8 @@ SAME70_CFLAGS := -c -std=gnu99 \
 	-nostdlib \
 	-Wundef \
 	-Wdouble-promotion \
-	-Werror=return-type \
-	-Werror=implicit \
 	-fsingle-precision-constant \
-	-O2 \
 	-Wall \
-	-Werror \
-	-Wwrite-strings \
 	$(SAME70_INCLUDES) \
 	$(SAME70_DEFINES)
 
