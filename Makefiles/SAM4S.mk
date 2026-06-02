@@ -41,12 +41,7 @@ SAM4S_CFLAGS := -c -std=gnu99 \
 	$(SAM4S_INCLUDES) \
 	$(SAM4S_DEFINES)
 
-# Add debug flags if DEBUG=1
-ifeq ($(DEBUG),1)
-SAM4S_CFLAGS += -O0 -g3
-else
-SAM4S_CFLAGS += -O2
-endif
+SAM4S_CFLAGS += $(DEBUG_FLAGS)
 
 SAM4S_OBJS := $(SAM4S_C_SRCS:%.c=$(SAM4S_BUILD_DIR)/%.o)
 SAM4S_DEPS := $(OBJS:.o=.d)

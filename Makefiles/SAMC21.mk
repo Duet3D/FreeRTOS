@@ -41,12 +41,7 @@ SAMC21_CFLAGS := -c -std=gnu99 \
 	$(SAMC21_INCLUDES) \
 	$(SAMC21_DEFINES)
 
-# Add debug flags if DEBUG=1
-ifeq ($(DEBUG),1)
-SAMC21_CFLAGS += -O0 -g3
-else
-SAMC21_CFLAGS += -O2
-endif
+SAMC21_CFLAGS += $(DEBUG_FLAGS)
 
 SAMC21_OBJS := $(SAMC21_C_SRCS:%.c=$(SAMC21_BUILD_DIR)/%.o)
 SAMC21_DEPS := $(OBJS:.o=.d)

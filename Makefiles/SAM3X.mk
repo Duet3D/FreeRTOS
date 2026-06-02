@@ -37,15 +37,11 @@ SAM3X_CFLAGS := -c -std=gnu99 \
 	-Wdouble-promotion \
 	-Werror=return-type \
 	-fsingle-precision-constant \
+	-O2 \
 	$(SAM3X_INCLUDES) \
 	$(SAM3X_DEFINES)
 
-# Add debug flags if DEBUG=1
-ifeq ($(DEBUG),1)
-	SAM3X_CFLAGS += -O0 -g3
-else
-	SAM3X_CFLAGS += -O2
-endif
+SAM3X_CFLAGS += $(DEBUG_FLAGS)
 
 SAM3X_OBJS := $(SAM3X_C_SRCS:%.c=$(SAM3X_BUILD_DIR)/%.o)
 SAM3X_DEPS := $(SAM3X_OBJS:.o=.d)
