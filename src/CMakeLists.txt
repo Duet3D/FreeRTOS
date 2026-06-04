@@ -76,6 +76,10 @@ if(NOT FREERTOS_PORT)
         " GCC_ARM_CM35P_NONSECURE          - Compiler: GCC           Target: ARM Cortex-M35P non-secure\n"
         " GCC_ARM_CM35P_SECURE             - Compiler: GCC           Target: ARM Cortex-M35P secure\n"
         " GCC_ARM_CM35P_NTZ_NONSECURE      - Compiler: GCC           Target: ARM Cortex-M35P non-trustzone non-secure\n"
+        " GCC_ARM_CM52_NONSECURE           - Compiler: GCC           Target: ARM Cortex-M52 non-secure\n"
+        " GCC_ARM_CM52_SECURE              - Compiler: GCC           Target: ARM Cortex-M52 secure\n"
+        " GCC_ARM_CM52_NTZ_NONSECURE       - Compiler: GCC           Target: ARM Cortex-M52 non-trustzone non-secure\n"
+        " GCC_ARM_CM52_TFM                 - Compiler: GCC           Target: ARM Cortex-M52 non-secure for TF-M\n"
         " GCC_ARM_CM55_NONSECURE           - Compiler: GCC           Target: ARM Cortex-M55 non-secure\n"
         " GCC_ARM_CM55_SECURE              - Compiler: GCC           Target: ARM Cortex-M55 secure\n"
         " GCC_ARM_CM55_NTZ_NONSECURE       - Compiler: GCC           Target: ARM Cortex-M55 non-trustzone non-secure\n"
@@ -84,8 +88,14 @@ if(NOT FREERTOS_PORT)
         " GCC_ARM_CM85_SECURE              - Compiler: GCC           Target: ARM Cortex-M85 secure\n"
         " GCC_ARM_CM85_NTZ_NONSECURE       - Compiler: GCC           Target: ARM Cortex-M85 non-trustzone non-secure\n"
         " GCC_ARM_CM85_TFM                 - Compiler: GCC           Target: ARM Cortex-M85 non-secure for TF-M\n"
+        " GCC_ARM_STAR_MC3_NONSECURE       - Compiler: GCC           Target: Arm China STAR-MC3 non-secure\n"
+        " GCC_ARM_STAR_MC3_SECURE          - Compiler: GCC           Target: Arm China STAR-MC3 secure\n"
+        " GCC_ARM_STAR_MC3_NTZ_NONSECURE   - Compiler: GCC           Target: Arm China STAR-MC3 non-trustzone non-secure\n"
+        " GCC_ARM_STAR_MC3_TFM             - Compiler: GCC           Target: Arm China STAR-MC3 non-secure for TF-M\n"
         " GCC_ARM_CR5                      - Compiler: GCC           Target: ARM Cortex-R5\n"
+        " GCC_ARM_CRX_MPU                  - Compiler: GCC           Target: ARM Cortex-Rx with MPU\n"
         " GCC_ARM_CRX_NOGIC                - Compiler: GCC           Target: ARM Cortex-Rx no GIC\n"
+        " GCC_ARM_CR82                     - Compiler: GCC           Target: ARM Cortex-R82\n"
         " GCC_ARM7_AT91FR40008             - Compiler: GCC           Target: ARM7 Atmel AT91R40008\n"
         " GCC_ARM7_AT91SAM7S               - Compiler: GCC           Target: ARM7 Atmel AT91SAM7S\n"
         " GCC_ARM7_LPC2000                 - Compiler: GCC           Target: ARM7 LPC2000\n"
@@ -137,15 +147,26 @@ if(NOT FREERTOS_PORT)
         " IAR_ARM_CM33_NONSECURE           - Compiler: IAR           Target: ARM Cortex-M33 non-secure\n"
         " IAR_ARM_CM33_SECURE              - Compiler: IAR           Target: ARM Cortex-M33 secure\n"
         " IAR_ARM_CM33_NTZ_NONSECURE       - Compiler: IAR           Target: ARM Cortex-M33 non-trustzone non-secure\n"
+        " IAR_ARM_CM33_TFM                 - Compiler: IAR           Target: ARM Cortex-M33 non-secure for TF-M\n"
         " IAR_ARM_CM35P_NONSECURE          - Compiler: IAR           Target: ARM Cortex-M35P non-secure\n"
         " IAR_ARM_CM35P_SECURE             - Compiler: IAR           Target: ARM Cortex-M35P secure\n"
         " IAR_ARM_CM35P_NTZ_NONSECURE      - Compiler: IAR           Target: ARM Cortex-M35P non-trustzone non-secure\n"
+        " IAR_ARM_CM52_NONSECURE           - Compiler: IAR           Target: ARM Cortex-M52 non-secure\n"
+        " IAR_ARM_CM52_SECURE              - Compiler: IAR           Target: ARM Cortex-M52 secure\n"
+        " IAR_ARM_CM52_NTZ_NONSECURE       - Compiler: IAR           Target: ARM Cortex-M52 non-trustzone non-secure\n"
+        " IAR_ARM_CM52_TFM                 - Compiler: IAR           Target: ARM Cortex-M52 non-secure for TF-M\n"
         " IAR_ARM_CM55_NONSECURE           - Compiler: IAR           Target: ARM Cortex-M55 non-secure\n"
         " IAR_ARM_CM55_SECURE              - Compiler: IAR           Target: ARM Cortex-M55 secure\n"
         " IAR_ARM_CM55_NTZ_NONSECURE       - Compiler: IAR           Target: ARM Cortex-M55 non-trustzone non-secure\n"
+        " IAR_ARM_CM55_TFM                 - Compiler: IAR           Target: ARM Cortex-M55 non-secure for TF-M\n"
         " IAR_ARM_CM85_NONSECURE           - Compiler: IAR           Target: ARM Cortex-M85 non-secure\n"
         " IAR_ARM_CM85_SECURE              - Compiler: IAR           Target: ARM Cortex-M85 secure\n"
         " IAR_ARM_CM85_NTZ_NONSECURE       - Compiler: IAR           Target: ARM Cortex-M85 non-trustzone non-secure\n"
+        " IAR_ARM_CM85_TFM                 - Compiler: IAR           Target: ARM Cortex-M85 non-secure for TF-M\n"
+        " IAR_ARM_STAR_MC3_NONSECURE       - Compiler: IAR           Target: Arm China STAR-MC3 non-secure\n"
+        " IAR_ARM_STAR_MC3_SECURE          - Compiler: IAR           Target: Arm China STAR-MC3 secure\n"
+        " IAR_ARM_STAR_MC3_NTZ_NONSECURE   - Compiler: IAR           Target: Arm China STAR-MC3 non-trustzone non-secure\n"
+        " IAR_ARM_STAR_MC3_TFM             - Compiler: IAR           Target: Arm China STAR-MC3 non-secure for TF-M\n"
         " IAR_ARM_CRX_NOGIC                - Compiler: IAR           Target: ARM Cortex-Rx no GIC\n"
         " IAR_ATMEGA323                    - Compiler: IAR           Target: ATMega323\n"
         " IAR_ATMEL_SAM7S64                - Compiler: IAR           Target: Atmel SAM7S64\n"
@@ -217,16 +238,17 @@ elseif((FREERTOS_PORT STREQUAL "A_CUSTOM_PORT") AND (NOT TARGET freertos_kernel_
     "    port.c\n"
     "    portmacro.h\n"
     " Where FreeRTOSCustomPort/CMakeLists.txt is a modified version of:\n"
-    "   add_library(freertos_kernel_port STATIC)\n"
+    "   add_library(freertos_kernel_port OBJECT)\n"
     "   target_sources(freertos_kernel_port\n"
     "     PRIVATE\n"
     "       port.c\n"
     "       portmacro.h)\n"
-    "   target_include_directories(freertos_kernel_port\n"
-    "     PUBLIC\n"
+    "   add_library(freertos_kernel_port_headers INTERFACE)\n"
+    "     target_include_directories(freertos_kernel_port_headers INTERFACE \n"
     "      .)\n"
     "   target_link_libraries(freertos_kernel_port\n"
     "     PRIVATE\n"
+    "       freertos_kernel_port_headers\n"
     "       freertos_kernel_include)")
 endif()
 
@@ -257,8 +279,11 @@ endif()
 
 target_link_libraries(freertos_kernel
     PUBLIC
-        freertos_kernel_port
         freertos_kernel_include
+        freertos_kernel_port_headers
+    PRIVATE
+        freertos_kernel_port
+
 )
 
 ########################################################################

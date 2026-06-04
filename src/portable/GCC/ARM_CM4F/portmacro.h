@@ -1,6 +1,6 @@
 /*
- * FreeRTOS Kernel V11.0.1
- * Copyright (C) 2021 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+ * FreeRTOS Kernel V11.3.0
+ * Copyright (C) 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  *
  * SPDX-License-Identifier: MIT
  *
@@ -96,7 +96,7 @@ typedef unsigned long    UBaseType_t;
         __asm volatile ( "isb" );                                  \
     }
 
-#define portNVIC_INT_CTRL_REG     ( *( ( volatile uint32_t * ) 0xe000ed04u ) )
+#define portNVIC_INT_CTRL_REG     ( *( ( volatile uint32_t * ) 0xe000ed04 ) )
 #define portNVIC_PENDSVSET_BIT    ( 1UL << 28UL )
 #define portEND_SWITCHING_ISR( xSwitchRequired ) \
     do                                           \
@@ -115,8 +115,8 @@ typedef unsigned long    UBaseType_t;
 /*-----------------------------------------------------------*/
 
 /* Critical section management. */
-extern void vPortEnterCritical( void ) noexcept;
-extern void vPortExitCritical( void ) noexcept;
+extern void vPortEnterCritical( void );
+extern void vPortExitCritical( void );
 #define portSET_INTERRUPT_MASK_FROM_ISR()         ulPortRaiseBASEPRI()
 #define portCLEAR_INTERRUPT_MASK_FROM_ISR( x )    vPortSetBASEPRI( x )
 #define portDISABLE_INTERRUPTS()                  vPortRaiseBASEPRI()
@@ -135,7 +135,7 @@ extern void vPortExitCritical( void ) noexcept;
 
 /* Tickless idle/low power functionality. */
 #ifndef portSUPPRESS_TICKS_AND_SLEEP
-    extern void vPortSuppressTicksAndSleep( TickType_t xExpectedIdleTime ) noexcept;
+    extern void vPortSuppressTicksAndSleep( TickType_t xExpectedIdleTime );
     #define portSUPPRESS_TICKS_AND_SLEEP( xExpectedIdleTime )    vPortSuppressTicksAndSleep( xExpectedIdleTime )
 #endif
 /*-----------------------------------------------------------*/
@@ -148,7 +148,7 @@ extern void vPortExitCritical( void ) noexcept;
 #if configUSE_PORT_OPTIMISED_TASK_SELECTION == 1
 
 /* Generic helper function. */
-    __attribute__( ( always_inline ) ) static inline uint8_t ucPortCountLeadingZeros( uint32_t ulBitmap ) noexcept
+    __attribute__( ( always_inline ) ) static inline uint8_t ucPortCountLeadingZeros( uint32_t ulBitmap )
     {
         uint8_t ucReturn;
 
@@ -174,7 +174,7 @@ extern void vPortExitCritical( void ) noexcept;
 
 /*-----------------------------------------------------------*/
 
-#ifdef configASSERT
+#if ( configASSERT_DEFINED == 1 )
     void vPortValidateInterruptPriority( void );
     #define portASSERT_IF_INTERRUPT_PRIORITY_INVALID()    vPortValidateInterruptPriority()
 #endif
@@ -188,7 +188,7 @@ extern void vPortExitCritical( void ) noexcept;
     #define portFORCE_INLINE    inline __attribute__( ( always_inline ) )
 #endif
 
-portFORCE_INLINE static BaseType_t xPortIsInsideInterrupt( void ) noexcept
+portFORCE_INLINE static BaseType_t xPortIsInsideInterrupt( void )
 {
     uint32_t ulCurrentInterrupt;
     BaseType_t xReturn;
@@ -210,7 +210,7 @@ portFORCE_INLINE static BaseType_t xPortIsInsideInterrupt( void ) noexcept
 
 /*-----------------------------------------------------------*/
 
-portFORCE_INLINE static void vPortRaiseBASEPRI( void ) noexcept
+portFORCE_INLINE static void vPortRaiseBASEPRI( void )
 {
     uint32_t ulNewBASEPRI;
 
@@ -226,7 +226,7 @@ portFORCE_INLINE static void vPortRaiseBASEPRI( void ) noexcept
 
 /*-----------------------------------------------------------*/
 
-portFORCE_INLINE static uint32_t ulPortRaiseBASEPRI( void ) noexcept
+portFORCE_INLINE static uint32_t ulPortRaiseBASEPRI( void )
 {
     uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
 
@@ -246,7 +246,7 @@ portFORCE_INLINE static uint32_t ulPortRaiseBASEPRI( void ) noexcept
 }
 /*-----------------------------------------------------------*/
 
-portFORCE_INLINE static void vPortSetBASEPRI( uint32_t ulNewMaskValue ) noexcept
+portFORCE_INLINE static void vPortSetBASEPRI( uint32_t ulNewMaskValue )
 {
     __asm volatile
     (
