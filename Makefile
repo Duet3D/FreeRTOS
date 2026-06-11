@@ -24,7 +24,7 @@ endif
 export Q VERBOSE
 
 # Available build configurations
-CONFIGS := SAM4E SAM4S SAME51 SAME70 SAMC21 RP2040 SAM3X
+CONFIGS := SAM4E SAME51 SAME70 SAMC21 RP2040 STM32H523 STM32H743
 
 # Default target
 .DEFAULT_GOAL := help
@@ -55,12 +55,12 @@ all: $(CONFIGS)
 
 # Include configuration-specific makefiles
 -include Makefiles/SAM4E.mk
--include Makefiles/SAM4S.mk
 -include Makefiles/SAME51.mk
 -include Makefiles/SAME70.mk
 -include Makefiles/SAMC21.mk
 -include Makefiles/RP2040.mk
--include Makefiles/SAM3X.mk
+-include Makefiles/STM32H523.mk
+-include Makefiles/STM32H743.mk
 
 # Generic clean target
 .PHONY: clean

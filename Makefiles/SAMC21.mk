@@ -13,7 +13,9 @@ SAMC21_C_SRCS := \
 	$(SAMC21_SRC_DIR)/timers.c \
 	$(SAMC21_SRC_DIR)/event_groups.c \
 	$(SAMC21_SRC_DIR)/stream_buffer.c \
-	$(SAMC21_PORT_DIR)/port.c
+	$(SAMC21_PORT_DIR)/port.c \
+	$(SAMC21_PORT_DIR)/portasm.c \
+	$(SAMC21_PORT_DIR)/mpu_wrappers_v2_asm.c
 
 SAMC21_INCLUDES := \
 	-I$(SAMC21_SRC_DIR)/include \
