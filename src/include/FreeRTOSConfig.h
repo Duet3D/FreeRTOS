@@ -30,6 +30,10 @@
 #ifndef FREERTOS_CONFIG_H
 #define FREERTOS_CONFIG_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /******************************************************************************/
 /* Hardware description related definitions. **********************************/
 /******************************************************************************/
@@ -85,12 +89,26 @@ extern uint32_t SystemCoreClock;
  * the next task to run using a generic C algorithm that works for all FreeRTOS
  * ports.  Not all FreeRTOS ports have this option.  Defaults to 0 if left
  * undefined. */
-#if defined(__SAME51N19A__) || defined(__SAME51G19A__) || defined(__SAME51J19A__) || defined(__SAME54P20A__) || defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__) || defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__) || defined(__SAMD51N19A__)
+#if defined(__SAME51N19A__) || defined(__SAME51G19A__) || defined(__SAME51J19A__) || defined(__SAME54P20A__) \
+			|| defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__) || defined(__SAM4E8E__) || defined(__SAM4S8C__) \
+			|| defined(__SAMD51N19A__) \
+			|| defined(STM32H523xx) || defined(STM32H743xx)
 # define configUSE_PORT_OPTIMISED_TASK_SELECTION	1
 #elif defined(__SAMC21G18A__) || defined(__RP2040__)
 # define configUSE_PORT_OPTIMISED_TASK_SELECTION	0
 #else
 # error Unsupported processor
+#endif
+
+// We currently use the MPU only on the Arm Cortex M7 processors so that we can control caching.
+#define configENABLE_MPU	(defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__) || defined(STM32H743xx))
+#define configENABLE_FPU	(defined(__SAME51N19A__) || defined(__SAME51G19A__) || defined(__SAME51J19A__) || defined(__SAME54P20A__) \
+								|| defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__) || defined(__SAM4E8E__) \
+								|| defined(__SAMD51N19A__) \
+								|| defined(STM32H523xx) || defined(STM32H743xx))
+
+#ifdef STM32H523xx
+# define portHAS_ARMV8M_MAIN_EXTENSION		1
 #endif
 
 /* Set configUSE_TICKLESS_IDLE to 1 to use the low power tickless mode.  Set to
@@ -102,7 +120,7 @@ extern uint32_t SystemCoreClock;
 /* configMAX_PRIORITIES Sets the number of available task priorities.  Tasks can
  * be assigned priorities of 0 to (configMAX_PRIORITIES - 1).  Zero is the lowest
  * priority. */
-#define configMAX_PRIORITIES					( 8 )	// each priority level used 20 bytes of RAM, so don't make this too large
+#define configMAX_PRIORITIES					( 8 )	// each priority level uses 20 bytes of RAM, so don't make this too large
 
 /* configMINIMAL_STACK_SIZE defines the size of the stack used by the Idle task
  * (in words, not in bytes!).  The kernel does not use this constant for any other
@@ -284,7 +302,7 @@ extern uint32_t SystemCoreClock;
 	#define configPRIO_BITS       		__NVIC_PRIO_BITS
 #elif defined(__SAME51N19A__) || defined(__SAME51G19A__) || defined(__SAME51J19A__) || defined(__SAME70Q21__) || defined(__SAME70Q20B__) || defined(__SAME70Q21B__) || defined(__SAME54P20A__) || defined(__SAMD51N19A__)
 	#define configPRIO_BITS       		3        /* 7 priority levels */
-#elif defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(__SAM3X8E__)
+#elif defined(__SAM4E8E__) || defined(__SAM4S8C__) || defined(STM32H523xx) || defined(STM32H743xx)
 	#define configPRIO_BITS       		4        /* 15 priority levels */
 #elif defined(__SAMC21G18A__) || defined(__RP2040__)
 #	define configPRIO_BITS       		2        /* 4 priority levels */
@@ -605,6 +623,10 @@ extern void vAssertCalled( uint32_t ulLine, const char *pcFile ) noexcept __attr
 #define xPortPendSVHandler PendSV_Handler
 #define vPortSVCHandler SVC_Handler
 #define xPortSysTickHandler SysTick_Handler		// the name used by everything else
+#endif
+
+#ifdef __cplusplus
+}	// end extern C
 #endif
 
 #endif /* FREERTOS_CONFIG_H */
