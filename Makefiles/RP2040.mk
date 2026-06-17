@@ -13,7 +13,9 @@ RP2040_C_SRCS := \
 	$(RP2040_SRC_DIR)/timers.c \
 	$(RP2040_SRC_DIR)/event_groups.c \
 	$(RP2040_SRC_DIR)/stream_buffer.c \
-	$(RP2040_PORT_DIR)/port.c
+	$(RP2040_PORT_DIR)/port.c \
+	$(RP2040_PORT_DIR)/portasm.c \
+	$(RP2040_PORT_DIR)/mpu_wrappers_v2_asm.c
 
 RP2040_INCLUDES := \
 	-I$(RP2040_SRC_DIR)/include \
