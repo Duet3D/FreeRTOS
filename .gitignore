@@ -56,6 +56,6 @@ Temporary Items
 /SAMC21_Debug/
 /SAME51_Debug/
 /RP2040/
-/STM32H523/
-/STM32H743/
+/STM32H5/
+/STM32H7/
 /.clangd
