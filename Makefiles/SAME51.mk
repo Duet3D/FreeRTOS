@@ -38,15 +38,11 @@ SAME51_CFLAGS := -c -std=gnu99 \
 	-fsingle-precision-constant \
 	-fstack-usage \
 	-fdump-rtl-expand \
+	-O2 \
 	$(SAME51_INCLUDES) \
 	$(SAME51_DEFINES)
 
-# Add debug flags if DEBUG=1
-ifeq ($(DEBUG),1)
-	SAME51_CFLAGS += -O0 -g3
-else
-	SAME51_CFLAGS += -O2
-endif
+SAME51_CFLAGS += $(DEBUG_FLAGS)
 
 SAME51_OBJS := $(SAME51_C_SRCS:%.c=$(SAME51_BUILD_DIR)/%.o)
 SAME51_DEPS := $(OBJS:.o=.d)

@@ -39,15 +39,11 @@ RP2040_CFLAGS := -c -std=gnu99 \
 	-Wdouble-promotion \
 	-Werror=return-type \
 	-fsingle-precision-constant \
+	-O2 \
 	$(RP2040_INCLUDES) \
 	$(RP2040_DEFINES)
 
-# Add debug flags if DEBUG=1
-ifeq ($(DEBUG),1)
-	RP2040_CFLAGS += -O0 -g3
-else
-	RP2040_CFLAGS += -O2
-endif
+RP2040_CFLAGS += $(DEBUG_FLAGS)
 
 RP2040_OBJS := $(RP2040_C_SRCS:%.c=$(RP2040_BUILD_DIR)/%.o)
 RP2040_DEPS := $(RP2040_OBJS:.o=.d)

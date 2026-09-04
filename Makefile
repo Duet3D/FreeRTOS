@@ -1,9 +1,10 @@
 # FreeRTOS Library Makefile
 # Builds FreeRTOS library for various MCU configurations
 
-# Cross-compiler toolchain
-#CROSS_COMPILE ?= ../arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-
-CROSS_COMPILE ?= ../arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-
+# Cross-compiler toolchain.
+# RepRapFirmware exports CROSS_COMPILE when building this as a submodule.
+# When building FreeRTOS standalone, fall back to a toolchain on PATH.
+CROSS_COMPILE ?= arm-none-eabi-
 export CROSS_COMPILE
 
 # Toolchain programs
