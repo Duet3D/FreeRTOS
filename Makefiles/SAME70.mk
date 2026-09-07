@@ -36,16 +36,12 @@ SAME70_CFLAGS := -c -std=gnu99 \
 	-Wundef \
 	-Wdouble-promotion \
 	-fsingle-precision-constant \
+	-O2 \
 	-Wall \
 	$(SAME70_INCLUDES) \
 	$(SAME70_DEFINES)
 
-# Add debug flags if DEBUG=1
-ifeq ($(DEBUG),1)
-SAME70_CFLAGS += -O0 -g3
-else
-SAME70_CFLAGS += -O2
-endif
+SAME70_CFLAGS += $(DEBUG_FLAGS)
 
 SAME70_OBJS := $(SAME70_C_SRCS:%.c=$(SAME70_BUILD_DIR)/%.o)
 SAME70_DEPS := $(OBJS:.o=.d)

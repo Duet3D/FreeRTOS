@@ -52,16 +52,12 @@ SAM4E_CFLAGS := -c -std=gnu99 \
 	-Wdouble-promotion \
 	-Werror=return-type \
 	-fsingle-precision-constant \
+	-O2 \
 	-Wall \
 	$(SAM4E_INCLUDES) \
 	$(SAM4E_DEFINES)
 
-# Add debug flags if DEBUG=1
-ifeq ($(DEBUG),1)
-	SAM4E_CFLAGS += -O0 -g3
-else
-	SAM4E_CFLAGS += -O2
-endif
+SAM4E_CFLAGS += $(DEBUG_FLAGS)
 
 # Object files
 SAM4E_OBJS := $(SAM4E_C_SRCS:%.c=$(SAM4E_BUILD_DIR)/%.o)
