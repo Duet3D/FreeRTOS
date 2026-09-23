@@ -5,7 +5,12 @@
 # RepRapFirmware exports CROSS_COMPILE when building this as a submodule.
 # When building FreeRTOS standalone, fall back to a toolchain on PATH.
 ARM_GNU_TOOLCHAIN_VERSION ?= 15.2.rel1
+ifeq ($(OS),Windows_NT)
+HOST_ARCH_RAW := $(subst AMD64,x86_64,$(subst ARM64,aarch64,$(PROCESSOR_ARCHITECTURE)))
+else
 HOST_ARCH_RAW := $(shell uname -m)
+HOST_OS_RAW := $(shell uname -s)
+endif
 
 ifeq ($(HOST_ARCH_RAW),aarch64)
 ARM_GNU_TOOLCHAIN_HOST_ARCH := aarch64
@@ -19,7 +24,15 @@ else
 ARM_GNU_TOOLCHAIN_HOST_ARCH := $(HOST_ARCH_RAW)
 endif
 
-CROSS_COMPILE ?= $(abspath ../arm-gnu-toolchain-$(ARM_GNU_TOOLCHAIN_VERSION)-$(ARM_GNU_TOOLCHAIN_HOST_ARCH)-arm-none-eabi/bin/arm-none-eabi-)
+ifeq ($(OS),Windows_NT)
+ARM_GNU_TOOLCHAIN_HOST := mingw-w64-$(ARM_GNU_TOOLCHAIN_HOST_ARCH)
+else ifeq ($(HOST_OS_RAW),Darwin)
+ARM_GNU_TOOLCHAIN_HOST := darwin-$(subst aarch64,arm64,$(ARM_GNU_TOOLCHAIN_HOST_ARCH))
+else
+ARM_GNU_TOOLCHAIN_HOST := $(ARM_GNU_TOOLCHAIN_HOST_ARCH)
+endif
+
+CROSS_COMPILE ?= $(abspath ../arm-gnu-toolchain-$(ARM_GNU_TOOLCHAIN_VERSION)-$(ARM_GNU_TOOLCHAIN_HOST)-arm-none-eabi/bin/arm-none-eabi-)
 export CROSS_COMPILE
 
 # Toolchain programs
