@@ -20,7 +20,7 @@ SAME70_INCLUDES := \
 	-I$(SAME70_PORT_DIR)
 
 SAME70_DEFINES := \
-	-D__SAME70Q21__ \
+	-D__SAME70Q20B__ \
 	-Dnoexcept=
 
 SAME70_CFLAGS := -c -std=gnu99 \
@@ -33,8 +33,11 @@ SAME70_CFLAGS := -c -std=gnu99 \
 	-ffunction-sections \
 	-fdata-sections \
 	-nostdlib \
+	-Werror \
 	-Wundef \
+	-Wwrite-strings \
 	-Wdouble-promotion \
+	-Werror=return-type \
 	-fsingle-precision-constant \
 	-O2 \
 	-Wall \
