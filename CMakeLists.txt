@@ -3,6 +3,8 @@
 #
 #   DUET_MCU          SAME70, SAME5x, SAMC21 or STM32H5
 #   DUET_PART_DEFINE  the macro naming the MCU part, e.g. __SAME70Q20B__
+#   DUET_RTL_DUMPS    write each source's RTL (-fdump-rtl-expand), for call graph and
+#                     stack analysis; ccache cannot cache these compiles
 #
 # Target: Duet::FreeRTOS. Linking it also defines RTOS for the consumer, which is how the other
 # Duet libraries and the firmware select their FreeRTOS code paths.
@@ -55,6 +57,6 @@ target_compile_options(FreeRTOS PRIVATE
     -Wundef
     -Wdouble-promotion
     -fstack-usage
-    -fdump-rtl-expand
+    $<$<BOOL:${DUET_RTL_DUMPS}>:-fdump-rtl-expand>
     # __FILE__ relative to the library root, so the image does not depend on the checkout location
     -fmacro-prefix-map=${CMAKE_CURRENT_SOURCE_DIR}/=)
