@@ -54,8 +54,11 @@ target_compile_options(FreeRTOS PRIVATE
     -fno-math-errno
     -fsingle-precision-constant
     -Wall
+    -Werror
     -Wundef
+    -Wwrite-strings
     -Wdouble-promotion
+    -Werror=return-type
     -fstack-usage
     $<$<BOOL:${DUET_RTL_DUMPS}>:-fdump-rtl-expand>
     # __FILE__ relative to the library root, so the image does not depend on the checkout location
